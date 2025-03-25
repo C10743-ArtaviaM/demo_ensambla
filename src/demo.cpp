@@ -2,7 +2,6 @@
 // ./demo
 // g++ demo.cpp -o demo -lsfml-graphics -lsfml-window -lsfml-system
 
-
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Audio.hpp>
@@ -117,7 +116,7 @@ public:
         {
             if (option.isClicked(mousePos))
             {
-                std::cout << "Opción seleccionada: " << option.getSelected() << std::endl;
+                std::cout << "Opcion seleccionada: " << option.getSelected() << std::endl;
                 toggle(); // Cerrar el dropdown después de seleccionar
                 return true;
             }
@@ -176,7 +175,7 @@ class Menu
 {
 public:
     Menu(float x, float y, const sf::Font &font)
-        : button(x, y, 200, 50, "Menú"), font(font)
+        : button(x, y, 200, 50, "Menu"), font(font)
     {
         button.setFont(font);
     }
@@ -204,7 +203,7 @@ public:
         {
             if (option.isClicked(mousePos))
             {
-                std::cout << "Opción del menú seleccionada: " << option.getSelected() << std::endl;
+                std::cout << "Opcion del menu seleccionada: " << option.getSelected() << std::endl;
                 toggle();
                 return true;
             }
@@ -261,18 +260,18 @@ int main()
 
     // Crear dropdown
     Dropdown dropdown(100, 600, font);
-    dropdown.addOption("Opción 1");
-    dropdown.addOption("Opción 2");
-    dropdown.addOption("Opción 3");
+    dropdown.addOption("Opcion 1");
+    dropdown.addOption("Opcion 2");
+    dropdown.addOption("Opcion 3");
 
     // Crear Pop-up
-    Popup popup(300, 200, "¡Botón 1 Clickeado!", font);
+    Popup popup(300, 200, "¡Boton 1 Clickeado!", font);
 
     // Crear Menú
     Menu menu(500, 100, font);
-    menu.addOption("Opción 1");
-    menu.addOption("Opción 2");
-    menu.addOption("Opción 3");
+    menu.addOption("Opcion 1");
+    menu.addOption("Opcion 2");
+    menu.addOption("Opcion 3");
 
     sf::Text label("Texto de etiqueta", font, 20);
     label.setPosition(100, 50);
@@ -297,13 +296,13 @@ int main()
                 {
                     button1Clicked = !button1Clicked;
                     std::cout << "Botón 1 clickeado!" << std::endl;
-                    popup = Popup(300, 200, "¡Botón 1 Clickeado!", font); // Crear nuevo pop-up al hacer clic
+                    popup = Popup(300, 200, "¡Boton 1 Clickeado!", font); // Crear nuevo pop-up al hacer clic
                 }
 
                 if (button2.isClicked(mousePos))
                 {
                     button2Clicked = !button2Clicked;
-                    std::cout << "Botón 2 clickeado!" << std::endl;
+                    std::cout << "Boton 2 clickeado!" << std::endl;
                 }
 
                 if (radioButton1.isClicked(mousePos))
